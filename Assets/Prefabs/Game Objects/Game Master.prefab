@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5916425539937827643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8329868273423689410}
+  - component: {fileID: 7560286892049366519}
+  - component: {fileID: 1214949574028286251}
+  m_Layer: 0
+  m_Name: Game Master
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8329868273423689410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5916425539937827643}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4464225108828844431}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7560286892049366519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5916425539937827643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13aef6c3eaead99478e2f0eadec2511e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenTargetChecks: 2
+  allTeams: []
+  teamColors:
+  - {r: 0.16509432, g: 0.89743865, b: 1, a: 1}
+  - {r: 0.8490566, g: 0.5970385, b: 0.1802243, a: 1}
+  - {r: 0.8396226, g: 0.5663492, b: 0.8286925, a: 1}
+  - {r: 0.53705674, g: 0.8113208, b: 0.4554112, a: 1}
+  - {r: 0.8396226, g: 0.35753092, b: 0.2732734, a: 1}
+  - {r: 0.5750221, g: 0.47281063, b: 0.8018868, a: 1}
+  - {r: 0.95889235, g: 1, b: 0.33490568, a: 1}
+  - {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
+  allUnits: []
+  everyPossibleUnitInGame:
+  - {fileID: 9216732030040304517, guid: da0972912fb0f8a4faad66a40b1f970c, type: 3}
+  - {fileID: 8322188401406556745, guid: 7c015a446968b354195792d5f37994c9, type: 3}
+  - {fileID: 1626758297081532686, guid: 1b4a0fe25b18a2d4db66a25362548258, type: 3}
+  - {fileID: 6825174891728314753, guid: cfc35f5a56232e14496152a49c1f1708, type: 3}
+  - {fileID: 6581874608514302721, guid: 7dc608a4f27b0894fbfc3e5ac5b12905, type: 3}
+  - {fileID: 1847522271227191825, guid: 657203535b7d34142ad74a56d62ef97f, type: 3}
+  - {fileID: 6554054845440463922, guid: 233f7b0d539061e4f95166f08d3ccf19, type: 3}
+  - {fileID: 7994374058041443406, guid: c6b419303a2720b48a5fad422db588c5, type: 3}
+  - {fileID: 1846874767775032898, guid: f616b9e282489a34baa03903e44756cd, type: 3}
+  - {fileID: 8721145876491043960, guid: b77c70e608f49054da85dda2376f02cc, type: 3}
+  - {fileID: 5703953279562147220, guid: 61eebc7e2d6504b459c90b4be0506d7f, type: 3}
+  - {fileID: 4479971010153783502, guid: 904fb6106407d0848b36e838dce8aa2a, type: 3}
+  - {fileID: 4691675363140545083, guid: e391bb68d008a944b88308293e3f3594, type: 3}
+  - {fileID: 1620358934019029437, guid: 3e711418b704ed543a0dda2c2ddfd6f1, type: 3}
+  - {fileID: 5667921034011592571, guid: b1e66140bbca03c4ab977301248ca6ea, type: 3}
+  - {fileID: 1694148958361502970, guid: a78ff619c483d6646a3ee58d3633043b, type: 3}
+  - {fileID: 2777217103073406673, guid: db27058e4e6073b48b3d48141a7c7158, type: 3}
+  - {fileID: 7432214553352071381, guid: c27e5598f94a4aa45a2952506ace1c25, type: 3}
+  - {fileID: 2617651583925857053, guid: 6f0ab03bbf283fe49beaea3432445065, type: 3}
+  - {fileID: 4900248941609858981, guid: 0920f5d0091828b458f1a7146d2f6615, type: 3}
+  - {fileID: 7551148466856662149, guid: d0f67ce2583497a46a8ab3035592f54c, type: 3}
+  - {fileID: 5645863200445722835, guid: fe5ea83aef408cf43a5108871f342958, type: 3}
+  - {fileID: 5833076614120454868, guid: 1b6e9b2d54b3ec446be1d05c270db7c6, type: 3}
+  - {fileID: 2208134117418318531, guid: a4c47c38c92bd604488b09a1ec443ca5, type: 3}
+  allBases: []
+  matchTeams: []
+  handledTeams: 
+  ignoreThese: []
+  coin: {fileID: 1609380952323245978, guid: bd6f83cd3e21fa447bc88099df616f8c, type: 3}
+  dump: {fileID: 7780047590934929274}
+  centerOfField: {x: 0, y: 0, z: 0}
+  defaultBaseObject: {fileID: 3908849016023721808, guid: ff6007cd5c4d3bf46acc7e46e8028c26,
+    type: 3}
+  defaultTeamObject: {fileID: 7447023016966426095, guid: a843e71080da33a468bb09fd5b8a9b7c,
+    type: 3}
+  possibleMaps:
+  - {fileID: 4079290652856667002, guid: 59f42e4beb4b74d4db604a90cbeb614d, type: 3}
+  - {fileID: 294389121802563340, guid: 50c41028043d14b46a0d556cc513c711, type: 3}
+  - {fileID: 1892074250328292241, guid: 42dd5b68cd6ed824091bf35aff21d98f, type: 3}
+  - {fileID: 8366130639887376010, guid: a96c8b13f1d47764e86b6e818d3349b9, type: 3}
+  - {fileID: 8595945843059972186, guid: ce8063134bef56640a24a713e1cacd36, type: 3}
+  - {fileID: 2868867894591630888, guid: 656def88abea4b6488932fb29171462f, type: 3}
+  - {fileID: 3537477284909474638, guid: 8b43c708eee6ee143af97732713c00a0, type: 3}
+  - {fileID: 1102127659702166989, guid: d515bcbda91ffef449ee8dc27aca0a09, type: 3}
+  alreadyDoneMaps: 
+  numberOfMapsOfSize: 
+  currentMap: {fileID: 0}
+  nextMap: {fileID: 0}
+  highestTeamCount: 0
+  backgroundMatchTimeAfterWin: 5
+--- !u!114 &1214949574028286251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5916425539937827643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba090d3c0e6a8c41b4026839eef7993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDiff: -4
+  startStatBoostRatio: 1.035
+  startAITechChance: 0.1
+  startLossesAllowed: 2
+  minDifficultyToIncreaseEnemies: -3
+  maxDifficultyToIncreaseEnemies: 10
+  alreadyLoadedNextMatch: 0
+--- !u!1 &7780047590934929274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4464225108828844431}
+  m_Layer: 0
+  m_Name: THE DUMP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4464225108828844431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7780047590934929274}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 28.134644, y: 6.5862465, z: 5.020452}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8329868273423689410}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

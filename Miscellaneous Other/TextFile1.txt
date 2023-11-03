@@ -1,0 +1,305 @@
+   
+   
+   
+   BACKUP of Unit.FindTarget()
+   
+   
+	private void FindTarget(priority p = priority.@null, bool reset = false, float targetChance = -1f)
+    {
+        if (targetChance == -1f)
+            targetChance = thisIsOurTargetChance;
+
+        if (p == priority.@null)
+            p = targPriority;
+
+        //reset our target if they're unavailable, or we say to reset
+        if (reset || (targetingBase && target.GetComponent<Base>().hp < 0) || (targetingUnit && target.GetComponent<Unit>().hp < 0))
+        {
+            //If we don't want to divert our attention from a base, keep the target
+            if (!(!cancelTargetingBaseWhenNewEnemyIsAvailable && targetingBase && targPriority != priority.@base))
+            /*Debug.Log("Keeping base target!", gameObject);
+            else*/
+            {
+                /*if (!cancelTargetingBaseWhenNewEnemyIsAvailable)
+                    Debug.Log("Not keeping base::: Not cancelling: true. TargetingBase: " + targetingBase + ". targPriority: " + targPriority.ToString(), gameObject);*/
+                target = null;
+            }
+        }
+
+
+        int HH = 0;
+
+        switch (p)
+        {
+
+            //Attack nearest
+            case priority.close:
+                {
+                    if (target != null)
+                        break;
+
+                    //Find nearest
+                    float distance = 1000f;
+                    //start in random position in list
+                    int startIndex = Mathf.Max(NIU.RandomRange(gm.allUnits.Count - 1), 0);
+                    int index = -1;
+                    int i = startIndex + 1;
+                    if (i >= gm.allUnits.Count)
+                        i = 0;
+
+                    Unit them = null;
+                    while(i != startIndex)
+                    {
+                        Unit quarry;
+
+                        try
+                        {
+                            quarry = gm.allUnits[i];
+                        }
+                        catch (System.ArgumentOutOfRangeException)
+                        {
+                            Debug.LogError("Out of range exception: i is " + i + ", startIndex is " + startIndex + ", gm.allUnits.Count is " + gm.allUnits.Count, gameObject);
+                            break;
+                        }
+
+                        //Not on our team AND closer than the previous closest
+                        if (quarry.teamI != teamI && !quarry.turret && quarry.targetable
+                            && (!waitUntilInRange || Vector3.Distance(transform.position, quarry.transform.position) < range) &&
+                            ((Vector3.Distance(transform.position, quarry.transform.position) < distance && Random.value < targetChance) 
+                             || distance > 600f))
+                        {
+                            //Second check. If this fails, then we could still target a base
+                            if(!quarry.invulnerable)
+                            {
+                                distance = Vector3.Distance(transform.position, quarry.transform.position);
+                                index = i;
+                                them = quarry;
+                            }
+                        }
+
+                        i++;
+                        if (i >= gm.allUnits.Count)
+                            i = 0;
+                        HH++;
+                        if(HH > 100)
+                        {
+                            Debug.Log("WE GOT STUCK", this);
+                            break;
+                        }
+                    }
+
+                    //set our target to the closest one
+                    if (index >= 0)
+                    {
+                        target = them.gameObject;
+                    }
+
+                    //If no units, find closest BASE TO ATTACK
+                    else if(!turret)
+                    {
+                        FindTarget(priority.@base);
+                    }
+
+                }
+                break;
+
+            case priority.low:
+                {
+                    if (target != null && target.GetComponent<Unit>() != null)
+                        break;
+
+                    //Find nearest
+                    float lowesthp = 1000f;
+                    //start in random position in list
+                    int startIndex = Mathf.Max(NIU.RandomRange(gm.allUnits.Count - 1), 0);
+                    int index = -1;
+                    int i = startIndex + 1;
+                    if (i >= gm.allUnits.Count)
+                        i = 0;
+
+                    Unit them = null;
+                    foreach (Unit quarry in gm.allUnits)
+                    {
+                        //Not on our team AND closer than the previous closest
+                        if (quarry.teamI != teamI && !quarry.turret && quarry.targetable
+                            && (!waitUntilInRange || Vector3.Distance(transform.position, quarry.transform.position) < range) &&
+                            ((quarry.hp < lowesthp && Random.value < targetChance) || lowesthp > 600f))
+                        {
+                            if (!quarry.invulnerable)
+                            {
+                                lowesthp = quarry.hp;
+                                index = i;
+                                them = quarry;
+                            }
+                        }
+
+                        i++;
+                        if (i >= gm.allUnits.Count)
+                            i = 0;
+                        HH++;
+                        if (HH > 100)
+                        {
+                            Debug.Log("WE GOT STUCK", this);
+                            break;
+                        }
+                    }
+
+                    if(index != -1)
+                    {
+                        target = them.gameObject;
+                    }
+                    //No units: BASE BASE BASE
+                    else
+                    {
+                        FindTarget(priority.@base);
+                    }
+
+                }
+                break;
+
+            case priority.strong:
+                {
+                    if (target != null && target.GetComponent<Unit>() != null)
+                        break;
+
+                    //Find nearest
+                    float bestdamage = -900f;
+                    //start in random position in list
+                    int startIndex = Mathf.Max(NIU.RandomRange(gm.allUnits.Count - 1), 0);
+                    int index = -1;
+                    int i = startIndex + 1;
+                    if (i >= gm.allUnits.Count)
+                        i = 0;
+
+                    Unit them = null;
+                    while (i != startIndex)
+                    {
+                        Unit quarry = gm.allUnits[i];
+
+                        //Not on our team AND closer than the previous closest
+                        if (quarry.teamI != teamI && !quarry.turret && quarry.targetable
+                            && (!waitUntilInRange || Vector3.Distance(transform.position, quarry.transform.position) < range) &&
+                            ((quarry.damage > bestdamage && Random.value < targetChance) || bestdamage < -5000f))
+                        {
+                            bestdamage = quarry.damage;
+                            index = i;
+                            them = quarry;
+                        }
+
+                        i++;
+                        if (i >= gm.allUnits.Count)
+                            i = 0;
+                        HH++;
+                        if (HH > 100)
+                        {
+                            Debug.Log("WE GOT STUCK", this);
+                            break;
+                        }
+                    }
+
+                    //set our target to the closest one
+                    if (index >= 0)
+                    {
+                        target = them.gameObject;
+                    }
+
+                    //If no units, find closest BASE TO ATTACK
+                    else
+                    {
+                        FindTarget(priority.@base);
+                    }
+                }
+                break;
+
+            case priority.@base:
+                {
+                    if (target != null || gm.allBases.Count <= 0)
+                        break;
+
+                    //CLOSEST BASE
+                    float distance = 1000f;
+                    int startIndex = Mathf.Max(NIU.RandomRange(gm.allBases.Count - 1), 0);
+                    int index = -1;
+                    int i = startIndex;
+                    if (i >= gm.allBases.Count)
+                        i = 0;
+                    Base targbase = null;
+                    while(i != startIndex || HH == 0)
+                    {
+                        Base quarry = gm.allBases[i];
+                        //Not on our team AND closer than the previous closest
+                        if (quarry != null && quarry.team.number != team.number &&
+                            ((Vector3.Distance(transform.position, quarry.transform.position) < distance/* && Random.value < targetChance*/) || distance > 900f))
+                        {
+                            distance = Vector3.Distance(transform.position, quarry.transform.position);
+                            index = i;
+                            targbase = quarry;
+                        }
+
+                        i++;
+                        if (i >= gm.allBases.Count)
+                            i = 0;
+                        HH++;
+                        if (HH > 100)
+                        {
+                            Debug.Log("WE GOT STUCK! Startindex is " + startIndex, this);
+                            break;
+                        }
+                    }
+
+                    //closest base
+                    if (index >= 0)
+                    {
+                        target = targbase.gameObject;
+                    }
+                }
+                break;
+
+
+
+            case priority.tLow:
+                {
+                    //same as priority.low, except only target people on my team
+                    if (target != null)
+                        break;
+
+                    //Find lowest health to target
+                    float lowesthp = 10000f;
+                    int index = -1;
+                    int i = 0;
+                    Unit them = null;
+                    foreach (Unit quarry in gm.allUnits)
+                    {
+                        //On our team, also make sure they're not also a healer and aren't at max level at 1 hp
+                        if (quarry.teamI == teamI && !quarry.turret && quarry.targetable
+                            && ((quarry.hp < lowesthp && Random.value < targetChance) || lowesthp > 1000f) 
+                            && quarry.damage > 0 && !quarry.criticalMax)
+                        {
+                            lowesthp = quarry.hp;
+                            index = i;
+                            them = quarry;
+                        }
+
+                        i++;
+                        HH++;
+                        if (HH > 100)
+                        {
+                            Debug.Log("WE GOT STUCK", this);
+                            break;
+                        }
+                    }
+
+                    if (index != -1)
+                    {
+                        target = them.gameObject;
+                    }
+                    //No units: TARGET OURSELF!!
+                    else
+                    {
+                        target = gameObject;
+                    }
+
+                }
+                break;
+        }
+    }

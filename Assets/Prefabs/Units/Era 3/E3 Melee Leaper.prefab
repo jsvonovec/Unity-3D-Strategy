@@ -1,0 +1,281 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4472225225723856054
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: ID
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: era
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: exp
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: cost
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: desc
+      value: Cheap flanker
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: maxhp
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: range
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: speed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: bounty
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: damage
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: jumpCD
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: jumper
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: lvlExp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: attackCD
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: lvlMaxHp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: lvlRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: lvlSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: realName
+      value: Conscription
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: buildTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: lvlBounty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: lvlDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: lvlAtkRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: jumpAirTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: attackWindUp
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: desiredRange
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: lvlUnitCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: targPriority
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: sphereColor.b
+      value: 0.7264151
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: sphereColor.g
+      value: 0.6070322
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: sphereColor.r
+      value: 0.2021627
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: maxLvlLifetime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: attackSlowSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: showCustomInspector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: thisIsOurTargetChance
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: killsToLevel.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: killsToLevel.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: killsToLevel.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: killsToLevel.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7756004307200247616, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: killsToLevel.Array.data[4]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 408238902094734689, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696445596889788747, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600067340016645977, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600067340016645977, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600067340016645977, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600067340016645977, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600067340016645977, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600067340016645977, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600067340016645977, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600067340016645977, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600067340016645977, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600067340016645977, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600067340016645977, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122251837961536461, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_Name
+      value: E3 Melee Leaper
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657304515826913935, guid: d9551bf4098b79d41aba86bed1e2166f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d9551bf4098b79d41aba86bed1e2166f, type: 3}
